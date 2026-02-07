@@ -2,7 +2,7 @@
 
 client_id = "71139a285e636acdb0d9a954194f9cdf"
 name = "store-map-app"
-application_url = "https://example.com"
+application_url = "https://store-map-9r6v.onrender.com"
 embedded = true
 
 [build]
