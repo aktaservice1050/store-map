@@ -162,6 +162,11 @@
       box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
       padding: 12px;
   }
+   .store-locator :focus-visible {
+    outline: none;
+    outline-offset: unset;
+    box-shadow: unset;
+}
   @media (max-width: 768px) {
     .store-locator__grid {
       grid-template-columns: 1fr;
@@ -301,6 +306,13 @@
       if (input) {
         input.addEventListener('keypress', e => {
           if (e.key === 'Enter') this.search();
+        });
+
+        // Input field খালি হলে সব store দেখানো
+        input.addEventListener('input', () => {
+          if (input.value.trim() === '') {
+            this.renderStores(this.stores);
+          }
         });
       }
     }
